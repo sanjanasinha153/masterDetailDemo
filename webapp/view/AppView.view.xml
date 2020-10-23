@@ -1,0 +1,12 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="firstProject.firstProject.controller.AppView"
+	>
+	<!--<App id="idAppView">-->
+		
+<!--		<pages>
+			<Page title="Title">
+				<content></content>
+			</Page>
+		</pages>-->
+<!--	</App>-->
+<SplitApp id="idAppView"></SplitApp>
+</mvc:View>

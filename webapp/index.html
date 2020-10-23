@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>firstProject</title>
+		<script id="sap-ui-bootstrap"
+			src="resources/sap-ui-core.js"
+			data-sap-ui-libs="sap.m, sap.ui.layout, sap.ui.table"
+			data-sap-ui-theme="sap_fiori_3"
+			data-sap-ui-resourceroots='{"firstProject.firstProject": "./"}'
+			data-sap-ui-compatVersion="edge"
+			data-sap-ui-oninit="module:sap/ui/core/ComponentSupport"
+			data-sap-ui-async="true"
+			data-sap-ui-frameOptions="trusted">
+		</script>
+		<Script>
+
+	         sap.ui.getCore().attachInit(function () {
+            var oAppV = sap.ui.xmlview({
+            	id: "idAppV",
+               viewName : "firstProject.firstProject.view.AppView"
+            });
+            
+            var oV1 = sap.ui.xmlview({
+            	id: "idV1",
+            	viewName: "firstProject.firstProject.view.View1"
+            });
+            
+            var oV2 = sap.ui.xmlview({
+            	id: "idV2",
+            	viewName: "firstProject.firstProject.view.View2"
+            });
+            
+            var oV3 = sap.ui.xmlview({
+            	id: "idV3",
+            	viewName: "firstProject.firstProject.view.View3"
+            });
+            var oApp = oAppV.byId("idAppView");
+            oApp.addMasterPage(oV1).addDetailPage(oV2);
+            oApp.addDetailPage(oV3);
+            //oApp.addPage(oV1).addPage(oV2);
+            oAppV.placeAt("content");
+         });
+
+		</script>
+	</head>
+	<body class="sapUiBody">
+		<div id="content"></div>
+	<!--	<div data-sap-ui-component data-name="firstProject.firstProject" data-id="content" data-settings='{"id" : "firstProject"}'></div>-->
+	</body>
+</html>

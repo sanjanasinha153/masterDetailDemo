@@ -1,0 +1,4 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form">
+	<SelectDialog title="Select City" confirm="onConfirm">
+	</SelectDialog>
+</core:FragmentDefinition>

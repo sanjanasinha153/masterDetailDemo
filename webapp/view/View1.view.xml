@@ -1,0 +1,36 @@
+<mvc:View controllerName="firstProject.firstProject.controller.View1" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<!--<Shell id="shell">
+		<App id="app">
+			<pages>-->
+	<Page title="{i18n>title}">
+		<SearchField id="idSearch" search="onSearch"></SearchField>
+		<headerContent>
+			<Button icon="sap-icon://action" press="onViewClick"></Button>
+		</headerContent>
+		<content>
+			<List items="{ path: '/Fruits', sorter: {path: 'name'}}" id="idList" itemPress="onItemPress">
+				<items>
+					<ObjectListItem number="{price}" numberUnit="{currency}" icon="{img}" title="{name}" type="Navigation"
+					>
+						<firstStatus>
+							<ObjectStatus text="{type}"/>
+						</firstStatus>
+						<attributes>
+							<ObjectAttribute text="{status}"></ObjectAttribute>
+						</attributes>
+					</ObjectListItem>
+				</items>
+			</List>
+			<List id="idList2"></List>
+		</content>
+		<footer>
+			<OverflowToolbar>
+				<ToolbarSpacer></ToolbarSpacer>
+				<Button icon="sap-icon://filter" press="onPress"/>
+			</OverflowToolbar>
+		</footer>
+	</Page>
+	<!--			</pages>
+		</App>
+	</Shell>-->
+</mvc:View>

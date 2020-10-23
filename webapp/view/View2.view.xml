@@ -1,0 +1,80 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="firstProject.firstProject.controller.View2"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:f="sap.ui.layout.form">
+	<!--	<App>
+		<pages>-->
+	<Page title="View2" showNavButton="true" navButtonPress="onBack">
+		<content>
+			<ObjectHeader id="itemHeader" icon="{img}" intro="{htBenefits}" title="{name}" responsive="true" number="{price}" numberUnit="{currency}"></ObjectHeader>
+			<IconTabBar id="iconTabBar" select="onFilterSelect">
+				<items>
+					<IconTabFilter icon="sap-icon://information" text="Additional Information" id="item1">
+						<ObjectHeader title="Additional Information"></ObjectHeader>
+						<f:SimpleForm>
+							<f:content>
+								<Label text="Type"></Label>
+								<Text text="{type}"/>
+								<Label text="Rate"></Label>
+								<Text text="{price} {currency}"/>
+							</f:content>
+						</f:SimpleForm>
+					</IconTabFilter>
+					<IconTabFilter icon="sap-icon://supplier" text="Suppliers" id="item2">
+						<Table items="{/Suppliers}">
+							<columns>
+								<Column>
+									<Text text="Owner"/>
+								</Column>
+								<Column>
+									<Text text="City"/>
+								</Column>
+								<Column minScreenWidth="Tablet">
+									<Text text="Since When"/>
+								</Column>
+								<Column minScreenWidth="Tablet" demandPopin="true">
+									<Text text="Status"/>
+								</Column>
+							</columns>
+							<items formatter=".formatter.SupplierFormatter">
+								<ColumnListItem type="Navigation" press="onSuplSelection">
+									<cells>
+										<ObjectStatus text="{Owner}"></ObjectStatus>
+										<Input value="{city}" showValueHelp="true" valueHelpRequest="onFilter">
+										</Input>
+										<ObjectStatus text="{begin}"></ObjectStatus>
+										<ObjectStatus text="{type}" state="{
+										path: 'type',
+										formatter:'.format.statusFormat'}"></ObjectStatus>
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+					</IconTabFilter>
+					<IconTabFilter icon="sap-icon://geographic-bubble-chart" text="City" id="item3">
+						<Select items="{path: '/Suppliers'}">
+							<core:Item key="{city}" text="{city}"/>
+						</Select>
+						<ComboBox items="{path: '/Suppliers'}">
+							<core:Item key="{city}" text="{city}"/>
+						</ComboBox>
+						<MultiComboBox items="{path: '/Suppliers'}">
+							<core:Item key="{city}" text="{city}"/>
+						</MultiComboBox>
+					</IconTabFilter>
+					<IconTabFilter icon="sap-icon://addresses" text="Address" id="item4">
+						<core:Fragment fragmentName="firstProject.firstProject.fragments.address" type="XML"></core:Fragment>
+						<core:Fragment fragmentName="firstProject.firstProject.fragments.address" type="XML"></core:Fragment>
+					</IconTabFilter>
+				</items>
+			</IconTabBar>
+		</content>
+		<footer>
+			<OverflowToolbar>
+				<ToolbarSpacer></ToolbarSpacer>
+				<Button type="Accept" text="ACCEPT" press="onAccept"/>
+				<Button type="Reject" text="REJECT"/>
+			</OverflowToolbar>
+		</footer>
+	</Page>
+	<!--		</pages>
+	</App>-->
+</mvc:View>

@@ -1,0 +1,25 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="firstProject.firstProject.controller.View3"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:f="sap.ui.layout.form">
+	<!--	<App>
+		<pages>-->
+	<Page title="Title3" showNavButton="true" navButtonPress="onBack">
+		<content>
+			<f:SimpleForm title="Supplier's Details">
+				<f:content>
+					<Label text="Id"></Label>
+					<Text text="{SuppliersId}"></Text>
+					<Label text="Shop Name"></Label>
+					<Text text="{name}"></Text>
+					<Label text="City"></Label>
+					<Text text="{city}"></Text>
+					<Label text="Since When"></Label>
+					<Text text="{begin}"></Text>
+					<Label text="Owner"></Label>
+					<Text text="{Owner}"></Text>
+				</f:content>
+			</f:SimpleForm>
+		</content>
+	</Page>
+	<!--		</pages>
+	</App>-->
+</mvc:View>
